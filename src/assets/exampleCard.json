@@ -4,25 +4,33 @@
     "version": "1.5",
     "body": [
         {
+            "type": "TextBlock",
+            "text": "Register Form",
+            "wrap": true,
+            "weight": "Bolder",
+            "size": "Medium"
+        },
+        {
             "type": "Input.Text",
             "label": "First Name",
             "placeholder": "Placeholder First Name",
             "id": "first_name",
-            "value": "${$root.first_name}"
+            "value": "${$root.first_name}",
+            "isRequired": true
         },
         {
             "type": "Input.Text",
             "label": "Last Name",
             "placeholder": "Placeholder Last Name",
             "id": "last_name",
-            "value": "${$root.last_name}"
+            "value": "${$root.last_name}",
+            "isRequired": true
         }
     ],
     "actions": [
         {
             "type": "Action.Submit",
-            "title": "Sign Up",
-            "associatedInputs": "none"
+            "title": "Sign Up"
         }
     ]
 }

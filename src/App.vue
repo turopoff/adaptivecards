@@ -6,8 +6,8 @@ export default {
   name: "App",
   data: () => ({
     data: {
-      first_name: null,
-      last_name: null,
+      first_name: "Flash",
+      last_name: "Man",
     },
     card: SampleCard,
     config: {},
@@ -15,26 +15,43 @@ export default {
 
   methods: {
     onItemClick(event, item) {
-      console.log(item);
+      this.data = item;
     },
   },
 };
 </script>
 
 <template>
-  <div class="demo">
-    <adaptive-cards
-      :card="card"
-      :data="data"
-      :use-templating="true"
-      :host-config="config"
-      @onActionClicked="onItemClick"
-    />
+  <div>
+    <div class="demo">
+      <adaptive-cards
+        :card="card"
+        :data="data"
+        :use-templating="true"
+        :host-config="config"
+        @onActionClicked="onItemClick"
+      />
+
+      <hr />
+
+      <div class="text">
+        {{ data }}
+      </div>
+    </div>
   </div>
 </template>
 
 <style>
 .demo {
-  padding: 0 50px;
+  margin: 30px auto;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid rgb(165, 165, 165);
+  border-radius: 5px;
+}
+
+.text {
+  font-family: sans-serif;
+  white-space: pre;
 }
 </style>
