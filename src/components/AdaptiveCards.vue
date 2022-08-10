@@ -90,10 +90,8 @@ export default {
 
       ac.onInputValueChanged = (e) => {
         if (e.id == "first_name") {
-          if (e.value == 1) {
-            const ee = ac.getElementById("last_name");
-            ee.isVisible = true;
-          }
+          const ee = ac.getElementById("last_name");
+          ee.isVisible = e.value == 1;
         }
       };
 
