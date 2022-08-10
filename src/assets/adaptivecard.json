@@ -1,7 +1,6 @@
 {
     "type": "AdaptiveCard",
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5",
     "body": [
         {
             "type": "TextBlock",
@@ -24,7 +23,8 @@
             "placeholder": "Placeholder Last Name",
             "id": "last_name",
             "value": "${$root.last_name}",
-            "isRequired": true
+            "isRequired": true,
+            "isVisible": false
         }
     ],
     "actions": [

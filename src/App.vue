@@ -1,8 +1,12 @@
 
 <script>
-import SampleCard from "./assets/exampleCard.json";
+import SampleCard from "./assets/adaptivecard.json";
+
+import AdaptiveCards from "./components/AdaptiveCards.vue";
 
 export default {
+  components: { AdaptiveCards },
+
   name: "App",
   data: () => ({
     data: {

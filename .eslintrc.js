@@ -13,7 +13,7 @@ module.exports = {
   rules: {
     'vue/no-v-html': 'off',
     'comma-dangle': 'off',
-    eqeqeq: 'error',
+    eqeqeq: 'off',
     semi: 'off',
     quotes: 'off',
     'no-console': 'off',
